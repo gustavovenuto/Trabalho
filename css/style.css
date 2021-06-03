@@ -145,6 +145,36 @@ nav ul li {
     color: #000000;
 }
 
+.individual h1 {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    margin: 12px 0;
+}
+
+.individual p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.individual img {
+    border-radius: 4px;
+}
+
+.individual .foto-texto p {
+    margin: 12px 0 36px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.individual .foto-texto {
+    flex-direction: column;
+}
+
+.individual .foto-texto img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main,aside {
     background-color: var(--cor-texto-claro);
     padding: 12px;
