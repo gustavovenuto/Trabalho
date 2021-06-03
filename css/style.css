@@ -89,26 +89,37 @@ nav ul li {
 }
 
 #menu-contraido {
-    margin: 24px;
-    display: table-caption;
-    border: 1px solid red;
-    width: 40px;
-    height: 40px;
+    display: inline-block;
+    position: relative;
 }
 
 #menu-contraido input, #menu-contraido span {
     width: 40px;
     height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menu-contraido input {
+    z-index: 100;
+    opacity: 0;
+    display: none;
 }
 
 #menu-contraido span {
     display: block;
     background-color: var(--cor-secundaria);
     border-radius: 4px;
-    border: 2px solid #ffffff;
-    background-image: url("img/menu-icon-48x48.png");
+    background-image: url('/img/menu-icon-48x48.png');
     background-size: 40px 40px;
     background-position: center center;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-contraido input:checked ~ span {
+    background-image: url('/img/close-icon-48x48.png');
 }
 
 #content {
@@ -225,6 +236,35 @@ footer img {
 }
 
 @media screen and (max-width: 800px) {
+    #menu {
+        min-height: 88px;
+        text-align: initial;
+    }
+    #menu ul {
+        margin-top: 50px;
+        margin-left: -35px;
+    }
+    #menu-contraido ul {
+        display: none;
+    }
+
+    #menu-contraido input, #menu-contraido span {
+        display: block;
+    }
+
+    #menu-contraido input:checked ~ ul {
+        display: block;
+    }
+
+    #menu-contraido {
+        display: table-caption;
+        margin-left: 15px;
+        width: 200px;
+        margin-top: 24px;
+    }
+    #menu ul li {
+        display: block;
+    }
     #content {
         flex-direction: column;
     }
