@@ -21,6 +21,11 @@
    
 }
 
+a {
+    color: var(--cor-primaria);
+    text-decoration: none; 
+}
+
 html {                  /* Tamanho de fonte padrão do documento */
     font-size: 16px;
 }
@@ -145,6 +150,10 @@ nav ul li {
     color: #000000;
 }
 
+.title-destaque {
+    margin: 12px 0;
+}
+
 .individual h1 {
     color: var(--cor-primaria);
     font-size: 2.5rem;
@@ -216,6 +225,24 @@ main article {
     filter: brightness(0.8);
 }
 
+article > h1 > a {
+    font-size: 1.5rem;
+    display: inline-flex;
+}
+
+article > h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+article > h1 {
+    font-size: 1.5rem;
+}
+
+.body-article {
+    text-align: initial; 
+    display: flex;  
+}
 
 main > h1 {
     text-transform: uppercase;
@@ -224,6 +251,7 @@ main > h1 {
 aside {
     margin-left: 10px;
     width: 37%;
+    background-color: var(--cor-escuro);
 }
 
 footer {
